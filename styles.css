@@ -1,0 +1,157 @@
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+.info {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 200px;
+    background: url('image/bca-banner.jpg') no-repeat center center/cover;
+    margin-top: 40px;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.container h1 {
+    animation: slideInLeft 2s ease-in-out;
+    font-size: 60px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('image/bca-banner.jpg') no-repeat center center/cover;
+    padding: 150px 0;
+}
+
+/* Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+.animate.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-body {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+}
+
+chat-footer input {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.bot-message {
+    background: #e9ecef;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+    text-align: right;
+}
+
+/* Key Features Section */
+.features {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.features .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.features .heading span {
+    color: violet;
+}
+
+.features .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    gap: 20px;
+}
+
+.box-container .content{
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #b9297a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+}
+.features .content {
+    background-color: #6c757d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+   
+}
+
+.features .content:hover {
+    transform: scale(1.05);
+    background-color: #b9297a;
+}
+
+.features .content .text {
+    font-size: 1.2rem;
+}
